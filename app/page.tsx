@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import HeroRedesigned from "@/components/hero-redesigned"
 import Header from "@/components/header"
 import BelvisoHero from "@/components/belviso-hero"
 import FacialServices from "@/components/facial-services"
@@ -26,6 +27,7 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden">
+      <HeroRedesigned />
       <Header />
       <BelvisoHero />
       <FacialServices />
