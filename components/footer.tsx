@@ -15,15 +15,15 @@ export default function Footer() {
           <div className="group hover:translate-y-2 transition-transform cursor-pointer">
             <div className="flex items-center gap-2 mb-4 hover:gap-3 transition-all">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="text-white font-bold">AP</span>
+                <span className="text-white font-bold">BC</span>
               </div>
               <div>
-                <h3 className="font-bold group-hover:text-primary transition-colors text-left">DR.GHOSH</h3>
-                <p className="text-xs text-gray-300">DENTAL STUDIO</p>
+                <h3 className="font-bold group-hover:text-primary transition-colors text-left">BELVISO</h3>
+                <p className="text-xs text-gray-300">FACIAL COSMETICS</p>
               </div>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed hover:text-gray-100 transition-colors">
-              Transforming smiles with cutting-edge orthodontic technology and personalized care.
+              Enhancing natural beauty with advanced facial cosmetic treatments and personalized aesthetic care.
             </p>
           </div>
 
@@ -41,26 +41,18 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("belviso")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
                 >
-                  Services
+                  Treatments
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => document.getElementById("doctors")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("belviso")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
                 >
-                  Doctors
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => document.getElementById("branches")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
-                >
-                  Branches
+                  Gallery
                 </button>
               </li>
               <li>
@@ -76,30 +68,30 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold mb-4">Services</h4>
+            <h4 className="font-bold mb-4">Treatments</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <button
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("belviso")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
                 >
-                  Clear Aligners
+                  Anti-Aging
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("belviso")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
                 >
-                  Metal Braces
+                  Laser Treatments
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("belviso")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
                 >
-                  Ceramic Braces
+                  Facials
                 </button>
               </li>
               <li>
@@ -113,41 +105,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Branches */}
+          {/* Locations */}
           <div>
-            <h4 className="font-bold mb-4">Branches</h4>
+            <h4 className="font-bold mb-4">Locations</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => document.getElementById("branches")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
-                >
+                <a href="tel:+919447045560" className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block">
                   Kochi Main
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById("branches")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
-                >
+                <a href="tel:+919447045560" className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block">
                   Thiruvananthapuram
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById("branches")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
-                >
+                <a href="tel:+919447045560" className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block">
                   Kozhikode
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById("branches")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block"
-                >
-                  More...
-                </button>
+                <a href="tel:+919447045560" className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block">
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
@@ -173,7 +153,7 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="border-t border-white/10 pt-8 flex items-center justify-between">
-          <p className="text-sm text-gray-300">&copy; 2025 Dr Dinaks family dental clinic. All rights reserved.</p>
+          <p className="text-sm text-gray-300">&copy; 2025 Belviso Facial Cosmetic Centre. All rights reserved.</p>
           <div className="flex gap-4">
             <a
               href="https://facebook.com"
