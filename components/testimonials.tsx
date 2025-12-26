@@ -66,7 +66,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
       </div>

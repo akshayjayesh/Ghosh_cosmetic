@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-teal-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-red-50" />
 
       {/* Animated Background Elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
