@@ -7,27 +7,27 @@ const stages = [
   {
     number: 1,
     title: "Consultation",
-    description: "Comprehensive evaluation and treatment planning",
+    description: "Comprehensive aesthetic evaluation and planning",
   },
   {
     number: 2,
-    title: "Scan",
-    description: "3D digital scanning for precision",
+    title: "Assessment",
+    description: "3D digital imaging for precision analysis",
   },
   {
     number: 3,
-    title: "Approval",
-    description: "Review and finalize treatment plan",
+    title: "Design",
+    description: "Personalized beauty enhancement plan",
   },
   {
     number: 4,
     title: "Treatment",
-    description: "Begin your smile transformation",
+    description: "Begin your aesthetic transformation",
   },
   {
     number: 5,
-    title: "Retention",
-    description: "Maintain your beautiful smile",
+    title: "Maintenance",
+    description: "Maintain your enhanced natural beauty",
   },
 ]
 
@@ -42,7 +42,7 @@ export default function Timeline() {
         {/* Section Title */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Treatment Process</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Five simple steps to your perfect smile</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Five simple steps to your enhanced appearance</p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
 
