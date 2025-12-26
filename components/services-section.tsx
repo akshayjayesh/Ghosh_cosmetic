@@ -39,7 +39,7 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
-          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: "#c2001a" }}>
             Our Services
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
