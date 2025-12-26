@@ -6,22 +6,22 @@ import { Card } from "@/components/ui/card"
 
 const services = [
   {
-    title: "Clear Aligners",
-    description: "Invisible, removable aligners for a discreet straightening journey",
-    price: "₹45,000 - ₹2,00,000",
-    image: "/clear-dental-aligners-transparent-braces.jpg",
+    title: "Anti-Aging Treatments",
+    description: "Advanced Botox and filler treatments for youthful appearance",
+    price: "₹5,000 - ₹30,000",
+    image: "/placeholder.svg",
   },
   {
-    title: "Metal Braces",
-    description: "Traditional, durable and highly effective orthodontic solution",
-    price: "₹30,000 - ₹1,50,000",
-    image: "/metal-braces-dental-orthodontic-treatment.jpg",
+    title: "Laser Skin Treatments",
+    description: "Cutting-edge laser technology for skin rejuvenation",
+    price: "₹8,000 - ₹50,000",
+    image: "/placeholder.svg",
   },
   {
-    title: "Ceramic Braces",
-    description: "Tooth-colored braces that blend naturally with your smile",
-    price: "₹60,000 - ₹2,50,000",
-    image: "/ceramic-braces-tooth-colored-orthodontic.jpg",
+    title: "Advanced Facials",
+    description: "Customized facials for radiant and healthy skin",
+    price: "₹3,000 - ₹15,000",
+    image: "/placeholder.svg",
   },
 ]
 
@@ -40,7 +40,7 @@ export default function Services() {
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Services</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive orthodontic solutions tailored to your needs
+            Comprehensive facial cosmetic solutions tailored to your needs
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
@@ -92,12 +92,12 @@ export default function Services() {
           <h3 className="text-2xl font-bold text-foreground mb-6">Additional Services</h3>
           <div className="flex flex-wrap gap-4 text-center">
             {[
-              "Power Chains",
-              "Rapid Palatal Expanders",
-              "Retainers",
-              "Emergency Repairs",
-              "Teeth Whitening",
-              "Orthodontic Checkup",
+              "Skin Tightening",
+              "Dermaplaning",
+              "Microdermabrasion",
+              "Chemical Peels",
+              "PRP Therapy",
+              "Facial Consultation",
             ].map((service, idx) => (
               <button
                 key={idx}

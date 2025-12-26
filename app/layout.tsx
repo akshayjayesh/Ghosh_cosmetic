@@ -13,7 +13,7 @@ import { BRAND_NAME } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: BRAND_NAME,
-  description: `${BRAND_NAME} — Complete Dental & Facial Aesthetics including Belviso Facial Cosmetic Centre services across Kerala.`,
+  description: `${BRAND_NAME} — Premium facial cosmetic treatments and aesthetic services across Kerala.`,
   generator: "v0.app",
 }
 
@@ -31,14 +31,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MedicalBusiness",
-              name: `${BRAND_NAME} & Belviso Facial Cosmetic Centre`,
+              name: BRAND_NAME,
               url: "https://example.com",
               department: [
-                { "@type": "Dentist", name: "Dental Care" },
-                { "@type": "MedicalSpa", name: "Belviso Facial Cosmetic Centre" }
+                { "@type": "MedicalSpa", name: "Facial Cosmetic Centre" }
               ],
               areaServed: "Kerala, India",
-              medicalSpecialty: ["Dentistry", "CosmeticDermatology"],
+              medicalSpecialty: ["CosmeticDermatology"],
             }),
           }}
           aria-hidden="true"

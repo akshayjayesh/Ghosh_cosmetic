@@ -11,14 +11,13 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    serviceType: "Dental Care",
+    serviceType: "Facial Cosmetics",
     branch: "",
     service: "",
     date: "",
     time: "",
   })
 
-  const dentalServices = ["Clear Aligners", "Metal Braces", "Ceramic Braces", "Consultation", "Other"]
   const facialServices = [
     "Anti-Aging (Botox/Fillers)",
     "Laser Treatments",
@@ -27,12 +26,7 @@ export default function Contact() {
     "Dermaplaning/Microdermabrasion",
     "PRP Therapy",
   ]
-  const services =
-    formData.serviceType === "Dental Care"
-      ? dentalServices
-      : formData.serviceType === "Facial Cosmetics"
-      ? facialServices
-      : [...dentalServices, ...facialServices]
+  const services = facialServices
   const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"]
 
   const handleNext = () => {
@@ -55,7 +49,7 @@ export default function Contact() {
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Book Your Appointment</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Take the first step towards your perfect smile
+            Take the first step towards your enhanced beauty
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
@@ -129,18 +123,9 @@ export default function Contact() {
                 {/* Step 2 */}
                 {formStep === 2 && (
                   <div className="space-y-6 animate-in fade-in">
-                    <div>
-                      <label className="block text-sm font-semibold text-foreground mb-3">Service Type</label>
-                      <select
-                        aria-label="Select service type"
-                        className="w-full px-4 py-3 border-2 border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all hover:border-primary/50 cursor-pointer"
-                        value={formData.serviceType}
-                        onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                      >
-                        <option>Dental Care</option>
-                        <option>Facial Cosmetics</option>
-                        <option>Both (Consultation)</option>
-                      </select>
+                    <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-foreground font-semibold">Facial Cosmetic Treatments</p>
+                      <p className="text-xs text-muted-foreground mt-1">Explore our range of advanced aesthetic treatments</p>
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-foreground mb-3">

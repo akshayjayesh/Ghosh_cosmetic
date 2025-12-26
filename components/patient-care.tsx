@@ -17,7 +17,7 @@ const carePoints = [
   },
   {
     title: "Expert Team",
-    description: "Experienced orthodontists and specialists",
+    description: "Experienced aesthetic specialists and clinicians",
     icon: Users,
   },
   {

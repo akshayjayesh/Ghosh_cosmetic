@@ -70,7 +70,7 @@ export default function Branches() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   return (
-    <section id="branches" className="py-20 bg-gradient-to-b from-white to-blue-50">
+    <section id="branches" className="py-20 bg-gradient-to-b from-white to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">

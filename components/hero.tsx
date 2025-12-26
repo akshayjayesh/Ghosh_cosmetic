@@ -7,12 +7,12 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 export default function Hero() {
   const [displayText, setDisplayText] = useState("")
   const [currentSlide, setCurrentSlide] = useState(0)
-  const fullText = "Transform Your Smile with Advanced Aligner & Braces Technology"
+  const fullText = "Enhance Your Natural Beauty with Advanced Facial Cosmetics"
 
   const heroImages = [
-    "/professional-dentist-with-patient-smiling-dental-c.jpg",
-    "/clear-dental-aligners-transparent-braces.jpg",
-    "/metal-braces-dental-orthodontic-treatment.jpg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
   ]
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-teal-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-red-50" />
 
       {/* Animated Background Elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
@@ -57,11 +57,11 @@ export default function Hero() {
                 <span className="text-primary animate-pulse">|</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-                Kerala's Premier Orthodontic Care | 6 Locations
+                Kerala's Premier Aesthetic & Cosmetic Center | 6 Locations
               </p>
               <div className="flex items-center gap-2 text-sm font-semibold text-primary mb-8 animate-pulse">
                 <span className="text-2xl">★★★★★</span>
-                <span>4.9/5 • 10,000+ Happy Smiles</span>
+                <span>4.9/5 • 10,000+ Satisfied Clients</span>
               </div>
             </div>
 

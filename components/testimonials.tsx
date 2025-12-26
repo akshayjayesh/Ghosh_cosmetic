@@ -10,35 +10,35 @@ const testimonials = [
     name: "Sarah Johnson",
     location: "Kochi",
     rating: 5,
-    text: "Outstanding experience! The team was professional and the treatment results exceeded my expectations. Highly recommended!",
+    text: "Outstanding experience! The team was professional and the aesthetic results exceeded my expectations. My skin looks amazing!",
     image: "/smiling-woman-portrait-professional.jpg",
   },
   {
     name: "Rajesh Kumar",
     location: "Thiruvananthapuram",
     rating: 5,
-    text: "Best orthodontic clinic in Kerala. The clear aligners were comfortable and effective. Very satisfied with the results.",
+    text: "Best facial cosmetic center in Kerala. The Botox and filler treatments were expertly done and look completely natural.",
     image: "/smiling-man-portrait-professional.jpg",
   },
   {
     name: "Priya Sharma",
     location: "Ernakulathappan",
     rating: 5,
-    text: "Dr Niyaz Nazeer is incredibly skilled. The entire staff is courteous and the clinic is state-of-the-art. Worth every penny!",
+    text: "The doctors are incredibly skilled and experienced. The entire staff is courteous and the clinic is state-of-the-art. Worth every penny!",
     image: "/happy-woman-face-portrait-smiling.jpg",
   },
   {
     name: "Arun Menon",
     location: "Kozhikode",
     rating: 5,
-    text: "Fantastic treatment journey. The technology used is impressive and the results are remarkable. Thank you!",
+    text: "Fantastic treatment experience. The cosmetic technology used is impressive and my skin transformation is remarkable. Highly satisfied!",
     image: "/confident-man-smiling-professional-portrait.jpg",
   },
   {
     name: "Lisa Anna",
     location: "Thrissur",
     rating: 5,
-    text: "Extremely professional team. The EMI options made treatment affordable. My smile transformation is incredible!",
+    text: "Extremely professional team with expertise in facial aesthetics. My skin rejuvenation results are incredible and look naturally beautiful!",
     image: "/cheerful-woman-face-portrait-smiling.jpg",
   },
 ]
@@ -66,7 +66,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
       </div>
@@ -112,13 +112,11 @@ export default function Testimonials() {
               </div>
 
               {/* Before/After Comparison */}
-              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-all hover:scale-105">
-                <img
-                  src="/before-after-dental-teeth-transformation-smile-com.jpg"
-                  alt="Before and after smile transformation"
-                  className="w-full h-full object-cover transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-all hover:scale-105 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-muted-foreground font-semibold">Facial Cosmetic Results</p>
+                  <p className="text-sm text-muted-foreground mt-2">Expert aesthetic transformations</p>
+                </div>
               </div>
             </div>
 

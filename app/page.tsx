@@ -1,21 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import HeroRedesigned from "@/components/hero-redesigned"
 import Header from "@/components/header"
-import Hero from "@/components/hero"
-import Branches from "@/components/branches"
-import Services from "@/components/services"
 import BelvisoHero from "@/components/belviso-hero"
 import FacialServices from "@/components/facial-services"
+import ServicesSection from "@/components/services-section"
 import BelvisoGallery from "@/components/belviso-gallery"
 import BelvisoWhyChoose from "@/components/belviso-why-choose"
 import BelvisoTestimonials from "@/components/belviso-testimonials"
-import Doctors from "@/components/doctors"
 import Technology from "@/components/technology"
-import PatientCare from "@/components/patient-care"
-import Testimonials from "@/components/testimonials"
-import Timeline from "@/components/timeline"
-import BeforeAfter from "@/components/before-after"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import FloatingActions from "@/components/floating-actions"
@@ -33,22 +27,15 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden">
+      <HeroRedesigned />
       <Header />
-      <Hero />
-      <Branches />
-      <Services />
-      {/* Facial Cosmetics */}
       <BelvisoHero />
       <FacialServices />
+      <ServicesSection />
       <BelvisoGallery />
       <BelvisoWhyChoose />
       <BelvisoTestimonials />
-      <Doctors />
       <Technology />
-      <PatientCare />
-      <Testimonials />
-      <Timeline />
-      <BeforeAfter />
       <Contact />
       <Footer />
       <FloatingActions />
