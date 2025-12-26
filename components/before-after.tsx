@@ -6,38 +6,38 @@ import { Card } from "@/components/ui/card"
 
 const cases = [
   {
-    title: "Severe Crowding Case",
-    treatment: "Clear Aligners",
-    image: "/dental-before-after-crowded-teeth-alignment-transf.jpg",
+    title: "Anti-Aging Transformation",
+    treatment: "Botox & Fillers",
+    image: "/placeholder.svg",
   },
   {
-    title: "Overbite Correction",
-    treatment: "Metal Braces",
-    image: "/dental-bite-correction-before-after-orthodontic-tr.jpg",
+    title: "Skin Rejuvenation",
+    treatment: "Laser Treatment",
+    image: "/placeholder.svg",
   },
   {
-    title: "Aesthetic Enhancement",
-    treatment: "Ceramic Braces",
-    image: "/smile-makeover-before-after-dental-treatment-impro.jpg",
+    title: "Facial Enhancement",
+    treatment: "Advanced Facial",
+    image: "/placeholder.svg",
   },
   {
-    title: "Spacing Correction",
-    treatment: "Clear Aligners",
-    image: "/teeth-gap-closure-dental-alignment-before-after.jpg",
+    title: "Skin Tightening",
+    treatment: "Skin Tightening",
+    image: "/placeholder.svg",
   },
   {
-    title: "Complex Case",
-    treatment: "Metal Braces",
-    image: "/complex-dental-malocclusion-correction-treatment-r.jpg",
+    title: "Complexion Improvement",
+    treatment: "Chemical Peel",
+    image: "/placeholder.svg",
   },
   {
-    title: "Quick Alignment",
-    treatment: "Clear Aligners",
-    image: "/teeth-alignment-before-after.jpg",
+    title: "Natural Beauty",
+    treatment: "PRP Therapy",
+    image: "/placeholder.svg",
   },
 ]
 
-const filters = ["All", "Aligners", "Braces"]
+const filters = ["All", "Anti-Aging", "Rejuvenation"]
 
 export default function BeforeAfter() {
   const [selectedFilter, setSelectedFilter] = useState("All")
@@ -46,7 +46,7 @@ export default function BeforeAfter() {
   const filtered =
     selectedFilter === "All"
       ? cases
-      : cases.filter((c) => c.treatment.includes(selectedFilter === "Aligners" ? "Aligner" : "Braces"))
+      : cases.filter((c) => c.treatment.includes(selectedFilter === "Anti-Aging" ? "Anti-Aging" : "Rejuvenation"))
 
   return (
     <section className="py-20 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
@@ -60,7 +60,7 @@ export default function BeforeAfter() {
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Before & After Gallery</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See the stunning transformations our patients have achieved
+            See the stunning aesthetic transformations our clients have achieved
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
