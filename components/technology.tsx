@@ -6,23 +6,23 @@ import { Card } from "@/components/ui/card"
 
 const technologies = [
   {
-    title: "3D Digital Scanning",
-    description: "Advanced 3D imaging for precise treatment planning",
+    title: "3D Digital Imaging",
+    description: "Advanced 3D imaging for precise aesthetic planning",
     icon: Zap,
   },
   {
-    title: "iTero Scanner",
-    description: "Latest intraoral scanning technology for accuracy",
+    title: "Medical-Grade Lasers",
+    description: "Latest laser technology for superior treatment results",
     icon: Cpu,
   },
   {
-    title: "AI-Powered Planning",
-    description: "Artificial intelligence for optimal treatment outcomes",
+    title: "AI-Powered Analysis",
+    description: "Artificial intelligence for optimal aesthetic outcomes",
     icon: Brain,
   },
   {
-    title: "Digital Smile Design",
-    description: "Visualize your smile before treatment begins",
+    title: "Digital Beauty Design",
+    description: "Visualize your enhanced appearance before treatment begins",
     icon: Smile,
   },
 ]
@@ -55,7 +55,7 @@ export default function Technology() {
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Advanced Technology</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Cutting-edge equipment for superior treatment results
+            State-of-the-art cosmetic technology for superior aesthetic results
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
@@ -63,8 +63,8 @@ export default function Technology() {
         {/* Main Technology Image */}
         <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl h-96 group cursor-pointer hover:shadow-3xl transition-all hover:-translate-y-2 duration-300">
           <img
-            src="/modern-dental-clinic-technology-equipment-itero-sc.jpg"
-            alt="Advanced dental technology"
+            src="/placeholder.svg"
+            alt="Advanced cosmetic treatment technology"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 brightness-90 group-hover:brightness-100"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -113,22 +113,22 @@ export default function Technology() {
             <div className="flex items-center gap-4 animate-in fade-in slide-in-from-left-4 duration-700 hover:translate-x-2 transition-transform cursor-pointer">
               <div className="text-3xl">✓</div>
               <div>
-                <p className="font-bold text-foreground">Painless Treatment</p>
-                <p className="text-sm text-muted-foreground">Comfortable procedures</p>
+                <p className="font-bold text-foreground">Non-Invasive</p>
+                <p className="text-sm text-muted-foreground">Minimal downtime procedures</p>
               </div>
             </div>
             <div className="flex items-center gap-4 animate-in fade-in slide-in-from-top-4 duration-700 delay-100 hover:translate-y-1 transition-transform cursor-pointer">
               <div className="text-3xl">✓</div>
               <div>
-                <p className="font-bold text-foreground">Faster Results</p>
-                <p className="text-sm text-muted-foreground">Accelerated treatment time</p>
+                <p className="font-bold text-foreground">Natural Results</p>
+                <p className="text-sm text-muted-foreground">Enhanced beauty that looks authentic</p>
               </div>
             </div>
             <div className="flex items-center gap-4 animate-in fade-in slide-in-from-right-4 duration-700 delay-200 hover:-translate-x-2 transition-transform cursor-pointer">
               <div className="text-3xl">✓</div>
               <div>
-                <p className="font-bold text-foreground">Precision Accuracy</p>
-                <p className="text-sm text-muted-foreground">Optimal alignment results</p>
+                <p className="font-bold text-foreground">Expert Results</p>
+                <p className="text-sm text-muted-foreground">Precision aesthetic outcomes</p>
               </div>
             </div>
           </div>
