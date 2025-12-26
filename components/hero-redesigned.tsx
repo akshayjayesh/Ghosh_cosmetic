@@ -45,6 +45,7 @@ export default function HeroRedesigned() {
           style={{
             backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F1de51d5462a249b98efb37df803b082a%2F019b6e9850e54a21ad2ac1b9542c6e0c?format=webp&width=1920')`,
             backgroundAttachment: "fixed",
+            backgroundPosition: "center 30%",
           }}
         />
 
