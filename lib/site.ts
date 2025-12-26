@@ -1,5 +1,5 @@
-export const BRAND_NAME = "Ghosh's Dental Studio"
-export const BRAND_LEGACY = "DR DINAKS"
+export const BRAND_NAME = "Belviso Facial Cosmetic Centre"
+export const BRAND_LEGACY = "Belviso"
 export const LOGO_SRC = "/logo-mascot.png"
 export const LEGACY_LOGO_SRC = "/logo-mascot.png"
 export const PHONE = "+91 94470 45560"
