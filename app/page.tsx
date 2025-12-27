@@ -29,7 +29,6 @@ export default function Home() {
       <HeroRedesigned />
       <Header />
       <BelvisoHero />
-      <FacialServices />
       <ServicesSection />
       <BelvisoGallery />
       <BelvisoWhyChoose />
