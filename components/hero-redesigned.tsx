@@ -41,9 +41,9 @@ export default function HeroRedesigned() {
   }
 
   const handleScroll = () => {
-    const aboutSection = document.getElementById("facial-services")
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" })
+    const servicesSection = document.getElementById("services")
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
