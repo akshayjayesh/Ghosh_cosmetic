@@ -24,11 +24,11 @@ export default function BelvisoHero() {
 
         <div className="flex items-center justify-center gap-4">
           <Button
-            onClick={() => document.getElementById("facial-services")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-primary hover:bg-primary/90 text-white px-8 py-6 hover:shadow-lg hover:scale-105 transition-all"
-            aria-label="Explore Facial Treatments"
+            aria-label="Explore Services"
           >
-            Explore Facial Treatments
+            Explore Services
           </Button>
           <Button
             variant="outline"
