@@ -1,4 +1,4 @@
-export const BRAND_NAME = "Belviso"
+export const BRAND_NAME = "Bel Viso"
 export const BRAND_LEGACY = "Bel Viso"
 export const LOGO_SRC = "https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F0266f0d0e051428d9d84fb33a21848bd?format=webp&width=800"
 export const LEGACY_LOGO_SRC = "https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F0266f0d0e051428d9d84fb33a21848bd?format=webp&width=800"
