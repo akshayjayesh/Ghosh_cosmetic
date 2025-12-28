@@ -127,7 +127,7 @@ export default function HeroRedesigned() {
               Unlock Your Skin's Potential
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline with Animated Text */}
             <p
               className="text-white text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-8 max-w-md lg:max-w-lg animate-in fade-in slide-in-from-left-8 duration-1000"
               style={{
@@ -135,7 +135,17 @@ export default function HeroRedesigned() {
                 opacity: 0.9,
               }}
             >
-              Advanced Facial Analysis & Personalized Treatments
+              Advanced Facial Analysis &{" "}
+              <span
+                className="font-semibold text-red-400 inline-block min-w-fit"
+                style={{
+                  animation: "typewriter 8s steps(50, end) infinite",
+                  borderRight: "2px solid rgba(248, 113, 113, 0.7)",
+                  paddingRight: "0.25em",
+                }}
+              >
+                Personalized Treatments
+              </span>
             </p>
 
             {/* CTA Buttons */}
