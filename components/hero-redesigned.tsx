@@ -153,9 +153,8 @@ export default function HeroRedesigned() {
             >
               Advanced Facial Analysis &{" "}
               <span
-                className="font-semibold text-red-400 inline-block min-w-fit transition-all duration-500"
+                className="font-semibold text-red-400 inline-block min-w-fit"
                 style={{
-                  opacity: textIndex === 0 ? 1 : 1,
                   animation: "fadeInOut 4s infinite",
                 }}
               >
