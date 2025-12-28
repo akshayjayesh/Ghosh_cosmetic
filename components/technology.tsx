@@ -60,11 +60,15 @@ export default function Technology() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
 
-        {/* Main Technology Image */}
+        {/* Main Technology Video */}
         <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl h-96 group cursor-pointer hover:shadow-3xl transition-all hover:-translate-y-2 duration-300">
-          <img
-            src="/placeholder.svg"
-            alt="Advanced cosmetic treatment technology"
+          <video
+            src="https://cdn.builder.io/o/assets%2Fa85192c0436d4571a8e6190f11f433bd%2Fa8c00a6fe48347129a4b440a8cdd4681?alt=media&token=03983e4d-4b8b-4e0e-b1bb-f20f6cb87475&apiKey=a85192c0436d4571a8e6190f11f433bd"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 brightness-90 group-hover:brightness-100"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
