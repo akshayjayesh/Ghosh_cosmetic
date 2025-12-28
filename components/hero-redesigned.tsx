@@ -153,14 +153,13 @@ export default function HeroRedesigned() {
             >
               Advanced Facial Analysis &{" "}
               <span
-                className="font-semibold text-red-400 inline-block min-w-fit"
+                className="font-semibold text-red-400 inline-block min-w-fit transition-all duration-500"
                 style={{
-                  animation: "typewriter 8s steps(50, end) infinite",
-                  borderRight: "2px solid rgba(248, 113, 113, 0.7)",
-                  paddingRight: "0.25em",
+                  opacity: textIndex === 0 ? 1 : 1,
+                  animation: "fadeInOut 4s infinite",
                 }}
               >
-                Personalized Treatments
+                {animatedTexts[textIndex]}
               </span>
             </p>
 
