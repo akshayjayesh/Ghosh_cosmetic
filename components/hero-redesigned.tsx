@@ -6,6 +6,14 @@ import { ChevronDown, Shield, Lightbulb } from "lucide-react"
 export default function HeroRedesigned() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [textIndex, setTextIndex] = useState(0)
+
+  const animatedTexts = [
+    "Personalized Treatments",
+    "Advanced Skin Analysis",
+    "Natural-Looking Results",
+    "Expert Procedures",
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +32,14 @@ export default function HeroRedesigned() {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("resize", handleResize)
     }
+  }, [])
+
+  useEffect(() => {
+    const textInterval = setInterval(() => {
+      setTextIndex((prev) => (prev + 1) % animatedTexts.length)
+    }, 4000)
+
+    return () => clearInterval(textInterval)
   }, [])
 
   const handleBookConsultation = () => {
