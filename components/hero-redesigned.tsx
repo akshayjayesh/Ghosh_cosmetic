@@ -76,7 +76,7 @@ export default function HeroRedesigned() {
           <div className="max-w-7xl mx-auto px-4 lg:px-12 py-4 lg:py-5 flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="text-xl lg:text-2xl font-semibold text-white">Belviso</h1>
+              <h1 className="text-xl lg:text-2xl font-semibold text-white">Bel Viso</h1>
             </div>
 
             {/* Desktop Menu */}
