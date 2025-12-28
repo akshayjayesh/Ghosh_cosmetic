@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="group hover:translate-y-2 transition-transform cursor-pointer">
             <div className="flex items-center gap-2 mb-4 hover:gap-3 transition-all">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform p-1">
-                <img src="https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F0266f0d0e051428d9d84fb33a21848bd?format=webp&width=200" alt="Belviso Logo" className="w-full h-full object-contain" />
+                <img src="https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F0266f0d0e051428d9d84fb33a21848bd?format=webp&width=200" alt="Bel Viso Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="font-bold group-hover:text-primary transition-colors text-left">BEL VISO</h3>
