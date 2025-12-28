@@ -37,7 +37,7 @@ export default function BelvisoWhyChoose() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h3 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Why Choose Ghosh's Dental Studio & Belviso Centre?
+            Why Choose Bel Viso?
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Expertise, safety, and outcomes you can trust</p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
