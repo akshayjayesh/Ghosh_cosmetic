@@ -18,7 +18,7 @@ export default function Footer() {
                 <img src="https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F0266f0d0e051428d9d84fb33a21848bd?format=webp&width=200" alt="Belviso Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-bold group-hover:text-primary transition-colors text-left">BELVISO</h3>
+                <h3 className="font-bold group-hover:text-primary transition-colors text-left">BEL VISO</h3>
                 <p className="text-xs text-gray-300">Facial Cosmetics</p>
               </div>
             </div>
