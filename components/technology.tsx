@@ -44,7 +44,7 @@ export default function Technology() {
   }, [])
 
   return (
-    <section id="technology" className="py-20 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+    <section id="technology" className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-pulse" />
