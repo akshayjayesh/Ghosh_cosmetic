@@ -13,7 +13,7 @@ export default function BelvisoHero() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-10 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Belviso - Where Beauty Meets Expertise
+            Bel Viso - Where Beauty Meets Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Medical-grade facial aesthetic services delivered by experienced professionals. "Bel Viso" means "Beautiful Face" in Italian.
