@@ -265,6 +265,15 @@ export default function HeroRedesigned() {
           }
         }
 
+        @keyframes fadeInOut {
+          0%, 100% {
+            opacity: 0;
+          }
+          10%, 90% {
+            opacity: 1;
+          }
+        }
+
         @media (max-width: 768px) {
           section[id="home"] {
             background-attachment: scroll !important;
