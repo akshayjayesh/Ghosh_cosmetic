@@ -10,8 +10,29 @@ interface ServiceCardProps {
   onBookNow: (serviceName: string) => void;
 }
 
+// Mapping of service titles to background image asset IDs
+const SERVICE_BACKGROUND_IMAGES: Record<string, string> = {
+  "Advanced Acne Treatment": "4ee8526c3bac495f955e0fd48447d108",
+  "HydraFacial Treatment": "f7cf9f2bd68e4312a3d193d115a993ba",
+  "Brightening & De-tan Solutions": "a4523a883bf34e2480e5350f94583363",
+  "Scar Reduction & Pore Refinement": "fdd533ed6ceb4bc3837ed0c8bdb8c475",
+  "Non-Surgical Face Lifting": "a3284f2af9654593a986081625a22ece",
+  "Medical Wart Removal": "1597ec58944141d3a1aa94f72f82baa2",
+  "Non-Surgical Hair Restoration": "eea5698e744841cd8357c62f07b62dee",
+  "Surgical Hair Transplant": "3d2cf2bee4014444aa10f0f5d82ae144",
+}
+
 export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
+
+  // Get background image URL for the service
+  const getBackgroundImageUrl = (title: string): string | null => {
+    const imageId = SERVICE_BACKGROUND_IMAGES[title]
+    if (imageId) {
+      return `url(https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F${imageId})`
+    }
+    return null
+  }
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
