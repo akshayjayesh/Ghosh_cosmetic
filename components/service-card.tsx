@@ -44,7 +44,20 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
             alt={service.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+          {getBackgroundImageUrl(service.title) ? (
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                backgroundImage: getBackgroundImageUrl(service.title) || undefined,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+          )}
           
           {service.popular && (
             <div className="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
