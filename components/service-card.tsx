@@ -12,14 +12,28 @@ interface ServiceCardProps {
 
 // Mapping of service titles to background image asset IDs
 const SERVICE_BACKGROUND_IMAGES: Record<string, string> = {
+  // Advanced Skin Care
   "Advanced Acne Treatment": "4ee8526c3bac495f955e0fd48447d108",
   "HydraFacial Treatment": "f7cf9f2bd68e4312a3d193d115a993ba",
   "Brightening & De-tan Solutions": "a4523a883bf34e2480e5350f94583363",
   "Scar Reduction & Pore Refinement": "fdd533ed6ceb4bc3837ed0c8bdb8c475",
   "Non-Surgical Face Lifting": "a3284f2af9654593a986081625a22ece",
   "Medical Wart Removal": "1597ec58944141d3a1aa94f72f82baa2",
+  "Permanent Hair Reduction": "f7cf9f2bd68e4312a3d193d115a993ba",
+  // Hair Restoration
   "Non-Surgical Hair Restoration": "eea5698e744841cd8357c62f07b62dee",
   "Surgical Hair Transplant": "3d2cf2bee4014444aa10f0f5d82ae144",
+  // Permanent Makeup
+  "Permanent Lip Coloring": "a736be3bea6b4693b45b25f482382cf4",
+  "Eyebrow Microblading": "0d649408fdcf41b181a8754e22a8e622",
+  "BB Glow Foundation Treatment": "e9cb05abfe804bb796a688cbfa739083",
+  "Scalp Micropigmentation": "6c4585d09c2e45718505cd0096242b01",
+  // Facial Plastic Surgery
+  "Chin Augmentation Surgery": "5cf92769fa8743fc8e037572fadd6921",
+  "Surgical Jawline Definition": "93803858f7854f03882308e2746b2fcf",
+  "Ear Reshaping Surgery": "1257f1ed33274a688b9f6109a7d7b7bf",
+  "Dimpleplasty": "e92d298dddc04ba7ab2c302cbf69e03f",
+  "Blepharoplasty (Eye Bag Surgery)": "896669a004064822a9cf909b55dd1559",
 }
 
 export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
