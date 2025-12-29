@@ -22,7 +22,7 @@ export default function Header() {
     { label: "Home", id: "home" },
     { label: "Treatments", id: "belviso" },
     { label: "Services", id: "services" },
-    { label: "Gallery", id: "belviso" },
+    { label: "Gallery", id: "gallery" },
     { label: "Contact", id: "contact" },
   ]
 
