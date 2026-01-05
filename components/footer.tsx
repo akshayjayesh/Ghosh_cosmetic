@@ -14,12 +14,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="group hover:translate-y-2 transition-transform cursor-pointer">
             <div className="flex items-center gap-2 mb-4 hover:gap-3 transition-all">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="text-white font-bold">BC</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform p-1">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F0266f0d0e051428d9d84fb33a21848bd?format=webp&width=200" alt="Bel Viso Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-bold group-hover:text-primary transition-colors text-left">BELVISO</h3>
-                <p className="text-xs text-gray-300">FACIAL COSMETICS</p>
+                <h3 className="font-bold group-hover:text-primary transition-colors text-left">BEL VISO</h3>
+                <p className="text-xs text-gray-300">Facial Cosmetics</p>
               </div>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed hover:text-gray-100 transition-colors">

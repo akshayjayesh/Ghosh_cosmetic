@@ -6,6 +6,14 @@ import { ChevronDown, Shield, Lightbulb } from "lucide-react"
 export default function HeroRedesigned() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [textIndex, setTextIndex] = useState(0)
+
+  const animatedTexts = [
+    "Personalized Treatments",
+    "Advanced Skin Analysis",
+    "Natural-Looking Results",
+    "Expert Procedures",
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +34,14 @@ export default function HeroRedesigned() {
     }
   }, [])
 
+  useEffect(() => {
+    const textInterval = setInterval(() => {
+      setTextIndex((prev) => (prev + 1) % animatedTexts.length)
+    }, 4000)
+
+    return () => clearInterval(textInterval)
+  }, [])
+
   const handleBookConsultation = () => {
     const contactSection = document.getElementById("contact")
     if (contactSection) {
@@ -41,9 +57,9 @@ export default function HeroRedesigned() {
   }
 
   const handleScroll = () => {
-    const aboutSection = document.getElementById("facial-services")
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" })
+    const servicesSection = document.getElementById("services")
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
@@ -55,9 +71,9 @@ export default function HeroRedesigned() {
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F1de51d5462a249b98efb37df803b082a%2F019b6e9850e54a21ad2ac1b9542c6e0c?format=webp&width=1920')`,
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F9376c2056d524d22a278c5d8f5d3e673?format=webp&width=1920')`,
             backgroundAttachment: "fixed",
-            backgroundPosition: "center 30%",
+            backgroundPosition: "center 40%",
             animation: isMobile ? "none" : "kenburns 20s ease-in-out infinite alternate",
           }}
         />
@@ -76,7 +92,7 @@ export default function HeroRedesigned() {
           <div className="max-w-7xl mx-auto px-4 lg:px-12 py-4 lg:py-5 flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="text-xl lg:text-2xl font-semibold text-white">Belviso</h1>
+              <h1 className="text-xl lg:text-2xl font-semibold text-white">Bel Viso</h1>
             </div>
 
             {/* Desktop Menu */}
@@ -127,7 +143,7 @@ export default function HeroRedesigned() {
               Unlock Your Skin's Potential
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline with Animated Text */}
             <p
               className="text-white text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-8 max-w-md lg:max-w-lg animate-in fade-in slide-in-from-left-8 duration-1000"
               style={{
@@ -135,7 +151,15 @@ export default function HeroRedesigned() {
                 opacity: 0.9,
               }}
             >
-              Advanced Facial Analysis & Personalized Treatments
+              Advanced Facial Analysis &{" "}
+              <span
+                className="font-semibold text-red-400 inline-block min-w-fit"
+                style={{
+                  animation: "fadeInOut 4s infinite",
+                }}
+              >
+                {animatedTexts[textIndex]}
+              </span>
             </p>
 
             {/* CTA Buttons */}
@@ -236,6 +260,15 @@ export default function HeroRedesigned() {
             opacity: 0.6;
           }
           50% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeInOut {
+          0%, 100% {
+            opacity: 0;
+          }
+          10%, 90% {
             opacity: 1;
           }
         }

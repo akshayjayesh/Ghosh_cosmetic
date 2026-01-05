@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import HeroRedesigned from "@/components/hero-redesigned"
 import Header from "@/components/header"
 import BelvisoHero from "@/components/belviso-hero"
-import FacialServices from "@/components/facial-services"
 import ServicesSection from "@/components/services-section"
 import BelvisoGallery from "@/components/belviso-gallery"
 import BelvisoWhyChoose from "@/components/belviso-why-choose"
@@ -30,7 +29,6 @@ export default function Home() {
       <HeroRedesigned />
       <Header />
       <BelvisoHero />
-      <FacialServices />
       <ServicesSection />
       <BelvisoGallery />
       <BelvisoWhyChoose />
