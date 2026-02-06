@@ -57,7 +57,7 @@ export default function Hero() {
                 <span className="text-primary animate-pulse">|</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-                Kerala's Premier Aesthetic & Cosmetic Center | 6 Locations
+                Kerala's Premier Aesthetic & Cosmetic Center | Thalassery
               </p>
               <div className="flex items-center gap-2 text-sm font-semibold text-primary mb-8 animate-pulse">
                 <span className="text-2xl">★★★★★</span>
