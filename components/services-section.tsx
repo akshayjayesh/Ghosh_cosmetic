@@ -74,9 +74,12 @@ export default function ServicesSection() {
 
         {/* View More Button */}
         {filteredServices.length > displayCount && (
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-12">
             <Button
-              onClick={() => setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)}
+              onClick={(e) => {
+                e.preventDefault()
+                setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)
+              }}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
               View More Services ({Math.max(0, filteredServices.length - displayCount)} more)
