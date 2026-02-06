@@ -84,19 +84,31 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* View More Button */}
-        {filteredServices.length > displayCount && (
+        {/* View More / View Less Button */}
+        {(filteredServices.length > displayCount || displayCount > INITIAL_DISPLAY_COUNT) && (
           <div className="flex justify-center mt-12">
-            <Button
-              onClick={(e) => {
-                e.preventDefault()
-                setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)
-                setHasLoadedMore(true)
-              }}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
-            >
-              View More Services ({Math.max(0, filteredServices.length - displayCount)} more)
-            </Button>
+            {filteredServices.length > displayCount ? (
+              <Button
+                onClick={(e) => {
+                  e.preventDefault()
+                  setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)
+                  setHasLoadedMore(true)
+                }}
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
+              >
+                View More Services ({Math.max(0, filteredServices.length - displayCount)} more)
+              </Button>
+            ) : (
+              <Button
+                onClick={(e) => {
+                  e.preventDefault()
+                  setDisplayCount(INITIAL_DISPLAY_COUNT)
+                }}
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
+              >
+                View Less Services
+              </Button>
+            )}
           </div>
         )}
       </div>
