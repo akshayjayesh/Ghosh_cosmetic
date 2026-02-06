@@ -73,7 +73,7 @@ export default function ServicesSection() {
         />
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" ref={newServicesRef}>
           {displayedServices.map((service, idx) => (
             <div key={service.id} className="animate-in fade-in" style={{ animationDelay: `${idx * 50}ms` }}>
               <ServiceCard
