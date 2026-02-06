@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, Star } from "lucide-react"
+import { ChevronDown, Star, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { Service } from "@/lib/services-data"
 
