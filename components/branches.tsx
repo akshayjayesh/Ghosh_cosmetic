@@ -31,7 +31,7 @@ export default function Branches() {
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Branches</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Visit us at any of our 6 premium locations across Kerala
+            Visit us at our premium location in Thalassery, Kerala
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>
