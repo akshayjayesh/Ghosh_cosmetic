@@ -11,6 +11,8 @@ const INITIAL_DISPLAY_COUNT = 6
 export default function ServicesSection() {
   const [selectedCategory, setSelectedCategory] = useState("All Services")
   const [displayCount, setDisplayCount] = useState(INITIAL_DISPLAY_COUNT)
+  const [hasLoadedMore, setHasLoadedMore] = useState(false)
+  const newServicesRef = useRef<HTMLDivElement>(null)
 
   // Filter services based on selected category
   const filteredServices = selectedCategory === "All Services"
@@ -19,6 +21,16 @@ export default function ServicesSection() {
 
   // Determine how many to display
   const displayedServices = filteredServices.slice(0, displayCount)
+
+  // Scroll to newly loaded services
+  useEffect(() => {
+    if (hasLoadedMore && newServicesRef.current) {
+      setTimeout(() => {
+        newServicesRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+      }, 100)
+      setHasLoadedMore(false)
+    }
+  }, [displayCount, hasLoadedMore])
 
   // Handle category change - reset display count
   const handleCategoryChange = (category: string) => {
