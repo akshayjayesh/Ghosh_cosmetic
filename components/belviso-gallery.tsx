@@ -37,8 +37,8 @@ const pairs: Pair[] = [
     category: "Acne treatment",
     treatment: "Medical Peel",
     sessions: "3 sessions",
-    before: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F509d78581d1442ad866b13c90520fcbf?format=webp&width=800",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F205555b2f36744819341090258311e0f?format=webp&width=800",
+    before: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F205555b2f36744819341090258311e0f?format=webp&width=800",
+    after: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F509d78581d1442ad866b13c90520fcbf?format=webp&width=800",
   },
   {
     category: "Skin treatments",
