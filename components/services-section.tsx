@@ -72,22 +72,14 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* View More / Show Less Button */}
-        {filteredServices.length > INITIAL_DISPLAY_COUNT && (
+        {/* View More Button */}
+        {filteredServices.length > displayCount && (
           <div className="flex justify-center">
             <Button
-              onClick={() => setShowAll(!showAll)}
+              onClick={() => setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
-              {showAll ? (
-                <>
-                  Show Less Services
-                </>
-              ) : (
-                <>
-                  View More Services ({filteredServices.length - INITIAL_DISPLAY_COUNT} more)
-                </>
-              )}
+              View More Services ({Math.max(0, filteredServices.length - displayCount)} more)
             </Button>
           </div>
         )}
