@@ -120,8 +120,9 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
 
       {/* Modal */}
       {isExpanded && service.detailedDescription && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-2xl z-50 w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto">
-          {/* Close Button */}
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            {/* Close Button */}
           <div className="flex items-center justify-between sticky top-0 bg-white border-b border-gray-200 p-6">
             <h2 className="text-2xl font-bold text-gray-900">{service.title}</h2>
             <button
@@ -182,6 +183,7 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
               </button>
             </div>
           </div>
+        </div>
         </div>
       )}
     </div>
