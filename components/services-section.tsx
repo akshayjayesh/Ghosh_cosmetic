@@ -10,7 +10,7 @@ const INITIAL_DISPLAY_COUNT = 6
 
 export default function ServicesSection() {
   const [selectedCategory, setSelectedCategory] = useState("All Services")
-  const [showAll, setShowAll] = useState(false)
+  const [displayCount, setDisplayCount] = useState(INITIAL_DISPLAY_COUNT)
 
   // Filter services based on selected category
   const filteredServices = selectedCategory === "All Services"
@@ -18,7 +18,13 @@ export default function ServicesSection() {
     : servicesData.filter((service) => service.category === selectedCategory)
 
   // Determine how many to display
-  const displayedServices = showAll ? filteredServices : filteredServices.slice(0, INITIAL_DISPLAY_COUNT)
+  const displayedServices = filteredServices.slice(0, displayCount)
+
+  // Handle category change - reset display count
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category)
+    setDisplayCount(INITIAL_DISPLAY_COUNT)
+  }
 
   const handleBookNow = (serviceName: string) => {
     const contactSection = document.getElementById("contact")
