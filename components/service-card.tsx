@@ -91,46 +91,6 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
             {service.shortDescription}
           </p>
 
-          {/* Expanded Content */}
-          {isExpanded && service.detailedDescription && (
-            <div className="animate-in fade-in slide-in-from-top-2 duration-300 mb-4 pb-4 border-t border-gray-200">
-              <p className="text-sm text-gray-700 mt-4 mb-4">
-                {service.detailedDescription}
-              </p>
-
-              {service.features && service.features.length > 0 && (
-                <div className="mb-4">
-                  <p className="text-xs font-semibold text-gray-900 mb-2">Key Benefits:</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="text-red-600 font-bold mt-0.5">✓</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {(service.duration || service.recovery) && (
-                <div className="grid grid-cols-2 gap-3 text-xs">
-                  {service.duration && (
-                    <div className="bg-red-50 rounded-lg p-2">
-                      <p className="text-gray-600 font-medium">Duration</p>
-                      <p className="text-gray-900 font-semibold">{service.duration}</p>
-                    </div>
-                  )}
-                  {service.recovery && (
-                    <div className="bg-red-50 rounded-lg p-2">
-                      <p className="text-gray-600 font-medium">Recovery</p>
-                      <p className="text-gray-900 font-semibold">{service.recovery}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-
           {/* Buttons */}
           <div className="flex gap-3 mt-auto pt-4 border-t border-gray-100">
             <button
