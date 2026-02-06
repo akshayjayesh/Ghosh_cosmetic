@@ -57,7 +57,7 @@ export default function ServicesSection() {
         {/* Filter Bar */}
         <ServicesFilterBar
           selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
+          onCategoryChange={handleCategoryChange}
         />
 
         {/* Services Grid */}
