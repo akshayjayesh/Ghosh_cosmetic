@@ -100,24 +100,90 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
               Book Now
             </button>
             <button
-              onClick={() => setIsExpanded(!isExpanded)}
+              onClick={() => setIsExpanded(true)}
               className="flex-1 border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-2.5 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-1.5"
             >
-              {isExpanded ? (
-                <>
-                  Show Less
-                  <ChevronDown size={16} className="rotate-180" />
-                </>
-              ) : (
-                <>
-                  More Details
-                  <ChevronDown size={16} />
-                </>
-              )}
+              More Details
+              <ChevronDown size={16} />
             </button>
           </div>
         </div>
       </div>
+
+      {/* Modal Backdrop */}
+      {isExpanded && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+          onClick={() => setIsExpanded(false)}
+        />
+      )}
+
+      {/* Modal */}
+      {isExpanded && service.detailedDescription && (
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-2xl z-50 w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in duration-300">
+          {/* Close Button */}
+          <div className="flex items-center justify-between sticky top-0 bg-white border-b border-gray-200 p-6">
+            <h2 className="text-2xl font-bold text-gray-900">{service.title}</h2>
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          {/* Modal Content */}
+          <div className="p-6 space-y-4">
+            <p className="text-base text-gray-700 leading-relaxed">
+              {service.detailedDescription}
+            </p>
+
+            {service.features && service.features.length > 0 && (
+              <div>
+                <p className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="text-red-600 font-bold mt-0.5">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {(service.duration || service.recovery) && (
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                {service.duration && (
+                  <div className="bg-red-50 rounded-lg p-3">
+                    <p className="text-sm text-gray-600 font-medium">Duration</p>
+                    <p className="text-base text-gray-900 font-semibold">{service.duration}</p>
+                  </div>
+                )}
+                {service.recovery && (
+                  <div className="bg-red-50 rounded-lg p-3">
+                    <p className="text-sm text-gray-600 font-medium">Recovery</p>
+                    <p className="text-base text-gray-900 font-semibold">{service.recovery}</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Modal Button */}
+            <div className="pt-4 border-t border-gray-200">
+              <button
+                onClick={() => {
+                  onBookNow(service.title)
+                  setIsExpanded(false)
+                }}
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
