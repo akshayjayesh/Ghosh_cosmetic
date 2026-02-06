@@ -11,7 +11,7 @@ const belvisoTestimonials = [
     text:
       "Seamless experience across both dental and facial treatments. The team explained everything clearly and the results look natural.",
     image: "/placeholder.svg",
-    meta: "Kochi • Jan 2025",
+    meta: "Thalassery • Jan 2025",
   },
   {
     name: "Rohan S.",
@@ -20,7 +20,7 @@ const belvisoTestimonials = [
     text:
       "My skin texture improved in just a few sessions. Professional setup and excellent aftercare guidance.",
     image: "/placeholder.svg",
-    meta: "Kanayannur • Dec 2024",
+    meta: "Thalassery • Dec 2024",
   },
   {
     name: "Maya P.",
@@ -29,7 +29,7 @@ const belvisoTestimonials = [
     text:
       "I've trusted the clinic for years. Adding Belviso was the best decision—complete care in one place.",
     image: "/placeholder.svg",
-    meta: "Kerala • Nov 2024",
+    meta: "Thalassery • Nov 2024",
   },
   {
     name: "Arun V.",
@@ -38,7 +38,7 @@ const belvisoTestimonials = [
     text:
       "Warm, reassuring team. Procedures were explained thoroughly and done with utmost hygiene.",
     image: "/placeholder.svg",
-    meta: "Kochi • Oct 2024",
+    meta: "Thalassery • Oct 2024",
   },
   {
     name: "Neha D.",
@@ -47,7 +47,7 @@ const belvisoTestimonials = [
     text:
       "Noticeable lift and glow after RF tightening and PRP. Confidence boost is real!",
     image: "/placeholder.svg",
-    meta: "Ernakulam • Sep 2024",
+    meta: "Thalassery • Sep 2024",
   },
 ]
 
