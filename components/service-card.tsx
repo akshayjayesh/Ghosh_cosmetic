@@ -131,11 +131,6 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
             </div>
           )}
 
-          {/* Price */}
-          <p className="text-base font-bold text-red-600 mb-4">
-            {service.price}
-          </p>
-
           {/* Buttons */}
           <div className="flex gap-3 mt-auto pt-4 border-t border-gray-100">
             <button
