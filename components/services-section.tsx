@@ -91,6 +91,7 @@ export default function ServicesSection() {
               onClick={(e) => {
                 e.preventDefault()
                 setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)
+                setHasLoadedMore(true)
               }}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
