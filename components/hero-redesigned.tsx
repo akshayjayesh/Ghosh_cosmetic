@@ -99,7 +99,7 @@ export default function HeroRedesigned() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-8">
-              {["Home", "Services", "About Us", "Testimonials", "Treatments", "Contact"].map(
+              {["Home", "Services", "About Us", "Gallery", "Testimonials", "Treatments", "Contact"].map(
                 (item) => (
                   <a
                     key={item}
