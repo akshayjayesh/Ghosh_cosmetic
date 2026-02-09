@@ -302,7 +302,7 @@ export default function Contact() {
                 <div className="space-y-1 text-sm">
                   <p className="flex justify-between hover:translate-x-1 transition-transform cursor-pointer">
                     <span className="text-muted-foreground">Mon - Sat:</span>{" "}
-                    <span className="font-semibold">9:00 AM - 8:00 PM</span>
+                    <span className="font-semibold">9:00 AM - 7:00 PM</span>
                   </p>
                   <p className="flex justify-between hover:translate-x-1 transition-transform cursor-pointer">
                     <span className="text-muted-foreground">Sunday:</span>{" "}
