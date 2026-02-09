@@ -244,7 +244,7 @@ export default function Contact() {
                   </Button>
                 )}
                 {formStep === 3 && (
-                  <Button className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-lg py-6 hover:shadow-lg hover:scale-105 transition-all font-semibold">
+                  <Button onClick={handleSubmit} className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-lg py-6 hover:shadow-lg hover:scale-105 transition-all font-semibold">
                     Book Now
                   </Button>
                 )}
