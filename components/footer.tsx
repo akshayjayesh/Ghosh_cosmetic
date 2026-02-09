@@ -114,8 +114,6 @@ export default function Footer() {
                   Thalassery
                 </a>
               </li>
-            
-              </li>
               <li>
                 <a href="tel:+919447045560" className="text-gray-300 hover:text-primary transition-colors hover:translate-x-1 inline-block">
                   Contact Us
