@@ -137,12 +137,8 @@ export default function Contact() {
                         onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
                       >
                         <option value="">Choose a branch</option>
-                        <option value="Kochi">Kochi Main</option>
-                        <option value="TVM">Thiruvananthapuram</option>
-                        <option value="Kozhikode">Kozhikode</option>
-                        <option value="Ernakulathappan">Ernakulathappan</option>
-                        <option value="Thrissur">Thrissur</option>
-                        <option value="Kottayam">Kottayam</option>
+                        <option value="Thalassery">Thalassery</option>
+                        
                       </select>
                     </div>
                     <div>
