@@ -275,7 +275,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">Main Branch</p>
-                    <p className="font-bold text-foreground text-sm">MG Road, Kochi</p>
+                    <p className="font-bold text-foreground text-sm">Thalassery</p>
                   </div>
                 </div>
               </div>
