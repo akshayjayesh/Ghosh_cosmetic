@@ -68,7 +68,7 @@ export default function BelvisoTestimonials() {
 
         <div className="overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div className="grid grid-flow-col auto-cols-[minmax(280px,1fr)] gap-6 snap-x snap-mandatory animate-carousel">
-            {belvisoTestimonials.map((t, idx) => (
+            {[...belvisoTestimonials, ...belvisoTestimonials].map((t, idx) => (
               <Card key={idx} className="p-6 snap-start shadow-lg hover:shadow-2xl transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <img
