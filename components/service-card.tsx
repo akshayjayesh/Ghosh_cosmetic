@@ -36,6 +36,20 @@ const SERVICE_BACKGROUND_IMAGES: Record<string, string> = {
   "Blepharoplasty (Eye Bag Surgery)": "896669a004064822a9cf909b55dd1559",
 }
 
+// Service-specific overlay positioning
+const SERVICE_OVERLAY_POSITIONS: Record<string, { left: string; top: string; width: string }> = {
+  "Advanced Acne Treatment": { left: "-5px", top: "-37px", width: "349px" },
+  "HydraFacial Treatment": { left: "-3px", top: "-97px", width: "347px" },
+  "Scar Reduction & Pore Refinement": { left: "-12px", top: "-37px", width: "353px" },
+  "Non-Surgical Face Lifting": { left: "0px", top: "-1px", width: "340px" },
+  "Medical Wart Removal": { left: "-6px", top: "-15px", width: "353px" },
+}
+
+// Service-specific image styling
+const SERVICE_IMAGE_STYLES: Record<string, { paddingTop?: string; marginTop?: string }> = {
+  "Non-Surgical Face Lifting": { paddingTop: "3px", marginTop: "-4px" },
+}
+
 export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
