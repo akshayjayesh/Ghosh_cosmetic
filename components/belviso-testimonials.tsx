@@ -102,12 +102,12 @@ export default function BelvisoTestimonials() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-33.333%);
+            transform: translateX(-50%);
           }
         }
 
         :global(.animate-carousel) {
-          animation: carousel 20s linear infinite;
+          animation: carousel 30s linear infinite;
         }
 
         :global(.animate-carousel):hover {
