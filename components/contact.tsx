@@ -274,14 +274,14 @@ export default function Contact() {
 
                 <a
                   href="mailto:belvisofacialcosmetics@gmail.com"
-                  className="flex items-center gap-4 p-4 bg-white rounded-lg hover:shadow-lg transition-all cursor-pointer group hover:scale-105"
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-lg transition-all cursor-pointer group hover:scale-105 min-w-0"
                 >
-                  <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all">
+                  <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all flex-shrink-0">
                     <Mail className="text-primary" size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-xs text-muted-foreground">Email</p>
-                    <p className="font-bold text-primary">belvisofacialcosmetics@gmail.com</p>
+                    <p className="font-bold text-primary text-sm break-words line-clamp-2">belvisofacialcosmetics@gmail.com</p>
                   </div>
                 </a>
 
