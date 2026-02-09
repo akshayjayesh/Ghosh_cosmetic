@@ -71,16 +71,15 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
             src={service.image || "/placeholder.svg"}
             alt={service.title}
             className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+            style={SERVICE_IMAGE_STYLES[service.title]}
           />
           {getBackgroundImageUrl(service.title) ? (
             <div
               style={{
                 position: "absolute",
-                left: "-12px",
+                ...(SERVICE_OVERLAY_POSITIONS[service.title] || { left: "-12px", top: "-37px", width: "353px" }),
                 right: "0px",
-                top: "-37px",
                 bottom: "0px",
-                width: "353px",
                 backgroundImage: getBackgroundImageUrl(service.title) || undefined,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "50% 50%",
