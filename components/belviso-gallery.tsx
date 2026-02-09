@@ -65,11 +65,12 @@ function Comparison({ before, after, labelL, labelR, sessions }: { before: strin
         src={before}
         alt={`${labelL} image`}
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ transform: "scale(1.1)" }}
         loading="lazy"
         decoding="async"
       />
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-        <img src={after} alt={`${labelR} image`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+        <img src={after} alt={`${labelR} image`} className="w-full h-full object-cover" style={{ transform: "scale(1.1)" }} loading="lazy" decoding="async" />
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
