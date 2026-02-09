@@ -95,6 +95,25 @@ export default function BelvisoTestimonials() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes carousel {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
+
+        :global(.animate-carousel) {
+          animation: carousel 20s linear infinite;
+        }
+
+        :global(.animate-carousel):hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   )
 }
