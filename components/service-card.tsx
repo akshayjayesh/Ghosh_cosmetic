@@ -62,10 +62,14 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
             <div
               style={{
                 position: "absolute",
-                inset: 0,
+                left: "-12px",
+                right: "0px",
+                top: "-37px",
+                bottom: "0px",
+                width: "353px",
                 backgroundImage: getBackgroundImageUrl(service.title) || undefined,
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
+                backgroundPosition: "50% 50%",
                 backgroundSize: "cover",
               }}
             />
