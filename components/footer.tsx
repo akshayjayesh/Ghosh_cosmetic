@@ -123,8 +123,6 @@ export default function Footer() {
           </div>
         </div>
 
-       
-
         {/* Social Icons */}
         <div className="border-t border-white/10 pt-8 flex items-center justify-between">
           <p className="text-sm text-gray-300">&copy; 2025 Belviso Facial Cosmetic Centre. All rights reserved.</p>
