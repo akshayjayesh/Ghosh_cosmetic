@@ -44,8 +44,8 @@ const pairs: Pair[] = [
     category: "Skin treatments",
     treatment: "Hydrafacial",
     sessions: "Monthly",
-    before: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2Fff3d97fd666e4aad8e28b164fdbe232c?format=webp&width=800",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2Ff4318684a3594d7dbf907ae00a93b1b3?format=webp&width=800",
+    before: "https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F7e6a32c999a04b28927c0d65d8f15e58?format=webp&width=800&height=1200",
+    after: "https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F362aa72b9d3e4362bea32e72534d81ae?format=webp&width=800&height=1200",
   },
   {
     category: "Facial contouring",
