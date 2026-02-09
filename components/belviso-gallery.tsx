@@ -99,7 +99,7 @@ function Comparison({ before, after, labelL, labelR, sessions }: { before: strin
 
 export default function BelvisoGallery() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-80 h-80 bg-primary/3 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/3 rounded-full blur-3xl animate-pulse" />
