@@ -320,17 +320,31 @@ export default function Contact() {
         </div>
 
         {/* Google Maps */}
-        <div className="mt-16 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.8956482932546!2d75.5193!3d11.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65cccc5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-xl"
-          />
+        <div className="mt-16">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-2xl font-bold text-foreground">Our Location</h3>
+            <a
+              href="https://maps.app.goo.gl/AgrZXaPA6diNoB7T8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all hover:scale-105"
+            >
+              <MapPin size={18} />
+              Open in Maps
+            </a>
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.8956482932546!2d75.5193!3d11.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65cccc5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-xl"
+            />
+          </div>
         </div>
       </div>
     </section>
