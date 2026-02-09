@@ -71,7 +71,9 @@ export default function HeroRedesigned() {
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2Ff19e12c24b1a4c9bb4b19f60c3f2f905?format=webp&width=1920&height=2880')`,
+            backgroundImage: isMobile
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2Fb95232e7d9d749c1a0652150cbc64cf3?format=webp&width=800&height=1200')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2Ff19e12c24b1a4c9bb4b19f60c3f2f905?format=webp&width=1920&height=2880')`,
             backgroundAttachment: "fixed",
             backgroundPosition: "center 40%",
             animation: isMobile ? "none" : "kenburns 20s ease-in-out infinite alternate",
