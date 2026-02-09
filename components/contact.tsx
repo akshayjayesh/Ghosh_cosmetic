@@ -318,6 +318,20 @@ export default function Contact() {
 
           </div>
         </div>
+
+        {/* Google Maps */}
+        <div className="mt-16 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.8956482932546!2d75.5193!3d11.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65cccc5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="rounded-xl"
+          />
+        </div>
       </div>
     </section>
   )
