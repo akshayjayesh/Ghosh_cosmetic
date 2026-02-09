@@ -7,9 +7,9 @@ const belvisoTestimonials = [
   {
     name: "Aisha K.",
     rating: 5,
-    treatment: "Dental Implants & Anti-aging Facial",
+    treatment: "Anti-aging Facial & Botox",
     text:
-      "Seamless experience across both dental and facial treatments. The team explained everything clearly and the results look natural.",
+      "The team explained everything clearly and the results look completely natural. My skin feels rejuvenated and I couldn't be happier with the outcome!",
     image: "/placeholder.svg",
     meta: "Thalassery • Jan 2025",
   },
