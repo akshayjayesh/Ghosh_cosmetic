@@ -296,13 +296,6 @@ export default function Contact() {
               </div>
             </Card>
 
-            {/* Special Offer */}
-            <Card className="p-6 bg-gradient-to-r from-primary to-accent text-white shadow-xl hover:shadow-2xl transition-all hover:scale-105 cursor-pointer animate-pulse">
-              <p className="text-sm font-semibold mb-2">LIMITED TIME OFFER</p>
-              <p className="text-2xl font-bold mb-2">30% OFF</p>
-              <p className="text-sm mb-4">On your first appointment and treatment planning</p>
-              <p className="text-xs opacity-90">Valid till end of month. T&C apply.</p>
-            </Card>
           </div>
         </div>
       </div>
