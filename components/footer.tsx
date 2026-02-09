@@ -136,7 +136,7 @@ export default function Footer() {
               <Facebook size={20} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/belvisofacial?igsh=MWVyeWk3NmtzdDJoZw=="
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg"
