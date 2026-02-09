@@ -37,6 +37,26 @@ export default function Contact() {
     if (formStep > 1) setFormStep(formStep - 1)
   }
 
+  const handleSubmit = () => {
+    // Validate required fields
+    if (!formData.name || !formData.phone || !formData.branch || !formData.service || !formData.date || !formData.time) {
+      alert("Please fill in all the required fields")
+      return
+    }
+
+    // Create WhatsApp message
+    const message = `Hello! I would like to book an appointment.\n\nDetails:\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\nBranch: ${formData.branch}\nPreferred Date: ${formData.date}\nPreferred Time: ${formData.time}`
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message)
+
+    // WhatsApp Business API URL
+    const whatsappUrl = `https://wa.me/919447045560?text=${encodedMessage}`
+
+    // Open WhatsApp
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
     <section id="contact" className="py-20 bg-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
