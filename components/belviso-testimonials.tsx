@@ -7,11 +7,11 @@ const belvisoTestimonials = [
   {
     name: "Aisha K.",
     rating: 5,
-    treatment: "Dental Implants & Anti-aging Facial",
+    treatment: "Anti-aging Facial & Botox",
     text:
-      "Seamless experience across both dental and facial treatments. The team explained everything clearly and the results look natural.",
+      "The team explained everything clearly and the results look completely natural. My skin feels rejuvenated and I couldn't be happier with the outcome!",
     image: "/placeholder.svg",
-    meta: "Kochi • Jan 2025",
+    meta: "Thalassery • Jan 2025",
   },
   {
     name: "Rohan S.",
@@ -20,7 +20,7 @@ const belvisoTestimonials = [
     text:
       "My skin texture improved in just a few sessions. Professional setup and excellent aftercare guidance.",
     image: "/placeholder.svg",
-    meta: "Kanayannur • Dec 2024",
+    meta: "Thalassery • Dec 2024",
   },
   {
     name: "Maya P.",
@@ -29,7 +29,7 @@ const belvisoTestimonials = [
     text:
       "I've trusted the clinic for years. Adding Belviso was the best decision—complete care in one place.",
     image: "/placeholder.svg",
-    meta: "Kerala • Nov 2024",
+    meta: "Thalassery • Nov 2024",
   },
   {
     name: "Arun V.",
@@ -38,7 +38,7 @@ const belvisoTestimonials = [
     text:
       "Warm, reassuring team. Procedures were explained thoroughly and done with utmost hygiene.",
     image: "/placeholder.svg",
-    meta: "Kochi • Oct 2024",
+    meta: "Thalassery • Oct 2024",
   },
   {
     name: "Neha D.",
@@ -47,7 +47,7 @@ const belvisoTestimonials = [
     text:
       "Noticeable lift and glow after RF tightening and PRP. Confidence boost is real!",
     image: "/placeholder.svg",
-    meta: "Ernakulam • Sep 2024",
+    meta: "Thalassery • Sep 2024",
   },
 ]
 
@@ -67,8 +67,8 @@ export default function BelvisoTestimonials() {
         </div>
 
         <div className="overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="grid grid-flow-col auto-cols-[minmax(280px,1fr)] gap-6 snap-x snap-mandatory">
-            {belvisoTestimonials.map((t, idx) => (
+          <div className="grid grid-flow-col auto-cols-[minmax(280px,1fr)] gap-6 snap-x snap-mandatory animate-carousel">
+            {[...belvisoTestimonials, ...belvisoTestimonials].map((t, idx) => (
               <Card key={idx} className="p-6 snap-start shadow-lg hover:shadow-2xl transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <img
@@ -95,6 +95,25 @@ export default function BelvisoTestimonials() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes carousel {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        :global(.animate-carousel) {
+          animation: carousel 30s linear infinite;
+        }
+
+        :global(.animate-carousel):hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   )
 }

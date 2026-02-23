@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, Star } from "lucide-react"
+import { ChevronDown, Star, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { Service } from "@/lib/services-data"
 
@@ -36,6 +36,20 @@ const SERVICE_BACKGROUND_IMAGES: Record<string, string> = {
   "Blepharoplasty (Eye Bag Surgery)": "896669a004064822a9cf909b55dd1559",
 }
 
+// Service-specific overlay positioning
+const SERVICE_OVERLAY_POSITIONS: Record<string, { left: string; top: string; width: string }> = {
+  "Advanced Acne Treatment": { left: "-5px", top: "-37px", width: "349px" },
+  "HydraFacial Treatment": { left: "-3px", top: "-97px", width: "347px" },
+  "Scar Reduction & Pore Refinement": { left: "-12px", top: "-37px", width: "353px" },
+  "Non-Surgical Face Lifting": { left: "0px", top: "-1px", width: "340px" },
+  "Medical Wart Removal": { left: "-6px", top: "-15px", width: "353px" },
+}
+
+// Service-specific image styling
+const SERVICE_IMAGE_STYLES: Record<string, { paddingTop?: string; marginTop?: string }> = {
+  "Non-Surgical Face Lifting": { paddingTop: "3px", marginTop: "-4px" },
+}
+
 export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -56,16 +70,19 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
           <img
             src={service.image || "/placeholder.svg"}
             alt={service.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+            style={SERVICE_IMAGE_STYLES[service.title]}
           />
           {getBackgroundImageUrl(service.title) ? (
             <div
               style={{
                 position: "absolute",
-                inset: 0,
+                ...(SERVICE_OVERLAY_POSITIONS[service.title] || { left: "-12px", top: "-37px", width: "353px" }),
+                right: "0px",
+                bottom: "0px",
                 backgroundImage: getBackgroundImageUrl(service.title) || undefined,
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
+                backgroundPosition: "50% 50%",
                 backgroundSize: "cover",
               }}
             />
@@ -91,51 +108,6 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
             {service.shortDescription}
           </p>
 
-          {/* Expanded Content */}
-          {isExpanded && service.detailedDescription && (
-            <div className="animate-in fade-in slide-in-from-top-2 duration-300 mb-4 pb-4 border-t border-gray-200">
-              <p className="text-sm text-gray-700 mt-4 mb-4">
-                {service.detailedDescription}
-              </p>
-
-              {service.features && service.features.length > 0 && (
-                <div className="mb-4">
-                  <p className="text-xs font-semibold text-gray-900 mb-2">Key Benefits:</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="text-red-600 font-bold mt-0.5">✓</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {(service.duration || service.recovery) && (
-                <div className="grid grid-cols-2 gap-3 text-xs">
-                  {service.duration && (
-                    <div className="bg-red-50 rounded-lg p-2">
-                      <p className="text-gray-600 font-medium">Duration</p>
-                      <p className="text-gray-900 font-semibold">{service.duration}</p>
-                    </div>
-                  )}
-                  {service.recovery && (
-                    <div className="bg-red-50 rounded-lg p-2">
-                      <p className="text-gray-600 font-medium">Recovery</p>
-                      <p className="text-gray-900 font-semibold">{service.recovery}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Price */}
-          <p className="text-base font-bold text-red-600 mb-4">
-            {service.price}
-          </p>
-
           {/* Buttons */}
           <div className="flex gap-3 mt-auto pt-4 border-t border-gray-100">
             <button
@@ -145,24 +117,92 @@ export default function ServiceCard({ service, onBookNow }: ServiceCardProps) {
               Book Now
             </button>
             <button
-              onClick={() => setIsExpanded(!isExpanded)}
+              onClick={() => setIsExpanded(true)}
               className="flex-1 border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-2.5 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-1.5"
             >
-              {isExpanded ? (
-                <>
-                  Show Less
-                  <ChevronDown size={16} className="rotate-180" />
-                </>
-              ) : (
-                <>
-                  More Details
-                  <ChevronDown size={16} />
-                </>
-              )}
+              More Details
+              <ChevronDown size={16} />
             </button>
           </div>
         </div>
       </div>
+
+      {/* Modal Backdrop */}
+      {isExpanded && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+          onClick={() => setIsExpanded(false)}
+        />
+      )}
+
+      {/* Modal */}
+      {isExpanded && service.detailedDescription && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            {/* Close Button */}
+          <div className="flex items-center justify-between sticky top-0 bg-white border-b border-gray-200 p-6">
+            <h2 className="text-2xl font-bold text-gray-900">{service.title}</h2>
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          {/* Modal Content */}
+          <div className="p-6 space-y-4">
+            <p className="text-base text-gray-700 leading-relaxed">
+              {service.detailedDescription}
+            </p>
+
+            {service.features && service.features.length > 0 && (
+              <div>
+                <p className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="text-red-600 font-bold mt-0.5">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {(service.duration || service.recovery) && (
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                {service.duration && (
+                  <div className="bg-red-50 rounded-lg p-3">
+                    <p className="text-sm text-gray-600 font-medium">Duration</p>
+                    <p className="text-base text-gray-900 font-semibold">{service.duration}</p>
+                  </div>
+                )}
+                {service.recovery && (
+                  <div className="bg-red-50 rounded-lg p-3">
+                    <p className="text-sm text-gray-600 font-medium">Recovery</p>
+                    <p className="text-base text-gray-900 font-semibold">{service.recovery}</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Modal Button */}
+            <div className="pt-4 border-t border-gray-200">
+              <button
+                onClick={() => {
+                  onBookNow(service.title)
+                  setIsExpanded(false)
+                }}
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+      )}
     </div>
   )
 }

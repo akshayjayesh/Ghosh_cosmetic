@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import ServiceCard from "@/components/service-card"
 import ServicesFilterBar from "@/components/services-filter-bar"
@@ -10,7 +10,9 @@ const INITIAL_DISPLAY_COUNT = 6
 
 export default function ServicesSection() {
   const [selectedCategory, setSelectedCategory] = useState("All Services")
-  const [showAll, setShowAll] = useState(false)
+  const [displayCount, setDisplayCount] = useState(INITIAL_DISPLAY_COUNT)
+  const [hasLoadedMore, setHasLoadedMore] = useState(false)
+  const newServicesRef = useRef<HTMLDivElement>(null)
 
   // Filter services based on selected category
   const filteredServices = selectedCategory === "All Services"
@@ -18,7 +20,23 @@ export default function ServicesSection() {
     : servicesData.filter((service) => service.category === selectedCategory)
 
   // Determine how many to display
-  const displayedServices = showAll ? filteredServices : filteredServices.slice(0, INITIAL_DISPLAY_COUNT)
+  const displayedServices = filteredServices.slice(0, displayCount)
+
+  // Scroll to newly loaded services
+  useEffect(() => {
+    if (hasLoadedMore && newServicesRef.current) {
+      setTimeout(() => {
+        newServicesRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+      }, 100)
+      setHasLoadedMore(false)
+    }
+  }, [displayCount, hasLoadedMore])
+
+  // Handle category change - reset display count
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category)
+    setDisplayCount(INITIAL_DISPLAY_COUNT)
+  }
 
   const handleBookNow = (serviceName: string) => {
     const contactSection = document.getElementById("contact")
@@ -51,11 +69,11 @@ export default function ServicesSection() {
         {/* Filter Bar */}
         <ServicesFilterBar
           selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
+          onCategoryChange={handleCategoryChange}
         />
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" ref={newServicesRef}>
           {displayedServices.map((service, idx) => (
             <div key={service.id} className="animate-in fade-in" style={{ animationDelay: `${idx * 50}ms` }}>
               <ServiceCard
@@ -66,23 +84,31 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* View More / Show Less Button */}
-        {filteredServices.length > INITIAL_DISPLAY_COUNT && (
-          <div className="flex justify-center">
-            <Button
-              onClick={() => setShowAll(!showAll)}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
-            >
-              {showAll ? (
-                <>
-                  Show Less Services
-                </>
-              ) : (
-                <>
-                  View More Services ({filteredServices.length - INITIAL_DISPLAY_COUNT} more)
-                </>
-              )}
-            </Button>
+        {/* View More / View Less Button */}
+        {(filteredServices.length > displayCount || displayCount > INITIAL_DISPLAY_COUNT) && (
+          <div className="flex justify-center mt-12">
+            {filteredServices.length > displayCount ? (
+              <Button
+                onClick={(e) => {
+                  e.preventDefault()
+                  setDisplayCount(displayCount + INITIAL_DISPLAY_COUNT)
+                  setHasLoadedMore(true)
+                }}
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
+              >
+                View More Services ({Math.max(0, filteredServices.length - displayCount)} more)
+              </Button>
+            ) : (
+              <Button
+                onClick={(e) => {
+                  e.preventDefault()
+                  setDisplayCount(INITIAL_DISPLAY_COUNT)
+                }}
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
+              >
+                View Less Services
+              </Button>
+            )}
           </div>
         )}
       </div>

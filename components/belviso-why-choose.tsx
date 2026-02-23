@@ -21,7 +21,7 @@ const points = [
     text: "Tailored treatment plans that respect your goals, comfort, and timelines.",
   },
   { icon: ShieldCheck, title: "Hygiene & Safety", text: "International sterilization, protocols, and monitored procedures." },
-  { icon: MapPin, title: "Convenient Location", text: "Easy access in Kanayannur, Kerala with flexible scheduling." },
+  { icon: MapPin, title: "Convenient Location", text: "Easy access in Thalassery, Kerala with flexible scheduling." },
   { icon: Sparkles, title: "Comprehensive Care", text: "From preventive dentistry to advanced facial aesthetics." },
   { icon: PiggyBank, title: "Affordable Packages", text: "Transparent pricing and flexible payment options." },
 ]

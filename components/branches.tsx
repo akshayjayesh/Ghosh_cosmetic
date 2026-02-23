@@ -8,58 +8,13 @@ import dynamic from "next/dynamic"
 
 const branches = [
   {
-    name: "Kochi Main",
-    address: "MG Road, Kochi, Kerala",
+    name: "Thalassery",
+    address: "Medical Center, Thalassery, Kerala",
     phone: "+91 94470 45560",
     hours: "9:00 AM - 8:00 PM",
-    coords: { lat: 9.9312, lng: 76.2673 },
+    coords: { lat: 11.7469, lng: 75.5193 },
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.5623842461247!2d76.2651!3d9.9312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890",
-  },
-  {
-    name: "Thiruvananthapuram",
-    address: "Statue Road, TVM, Kerala",
-    phone: "+91 98765 43211",
-    hours: "9:00 AM - 7:00 PM",
-    coords: { lat: 8.5241, lng: 76.9366 },
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.9878941622906!2d76.9366!3d8.5241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b64f5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890",
-  },
-  {
-    name: "Kozhikode",
-    address: "Calicut Medical Road",
-    phone: "+91 98765 43212",
-    hours: "10:00 AM - 8:00 PM",
-    coords: { lat: 11.2588, lng: 75.7804 },
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.8956482932546!2d75.7804!3d11.2588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65cccc5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sKozhikode%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890",
-  },
-  {
-    name: "Ernakulathappan",
-    address: "Ernakulathappan Road, Kochi",
-    phone: "+91 98765 43213",
-    hours: "9:00 AM - 7:00 PM",
-    coords: { lat: 9.9, lng: 76.27 },
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.2345678901234!2d76.27!3d9.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sErnakulathappan%2C%20Kochi!5e0!3m2!1sen!2sin!4v1234567890",
-  },
-  {
-    name: "Thrissur",
-    address: "Sakthan Vazhcha Road, Thrissur",
-    phone: "+91 98765 43214",
-    hours: "10:00 AM - 6:00 PM",
-    coords: { lat: 10.5276, lng: 76.2144 },
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.8901234567890!2d76.2144!3d10.5276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b088f8f8f8f8f8f%3A0x5c5c5c5c5c5c5c5c!2sThrissur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890",
-  },
-  {
-    name: "Kottayam",
-    address: "Kottayam Medical Center",
-    phone: "+91 98765 43215",
-    hours: "9:00 AM - 7:00 PM",
-    coords: { lat: 9.5942, lng: 76.5214 },
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.5678901234567!2d76.5214!3d9.5942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0814b5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sKottayam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.8956482932546!2d75.5193!3d11.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65cccc5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890",
   },
 ]
 
@@ -76,7 +31,7 @@ export default function Branches() {
         <div className="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-700">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Branches</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Visit us at any of our 6 premium locations across Kerala
+            Visit us at our premium location in Thalassery, Kerala
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6" />
         </div>

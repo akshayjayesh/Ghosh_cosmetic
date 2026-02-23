@@ -37,15 +37,15 @@ const pairs: Pair[] = [
     category: "Acne treatment",
     treatment: "Medical Peel",
     sessions: "3 sessions",
-    before: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F509d78581d1442ad866b13c90520fcbf?format=webp&width=800",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F205555b2f36744819341090258311e0f?format=webp&width=800",
+    before: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F205555b2f36744819341090258311e0f?format=webp&width=800",
+    after: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2F509d78581d1442ad866b13c90520fcbf?format=webp&width=800",
   },
   {
     category: "Skin treatments",
     treatment: "Hydrafacial",
     sessions: "Monthly",
-    before: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2Fff3d97fd666e4aad8e28b164fdbe232c?format=webp&width=800",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F9e5464ed21f1499c91aab477b8b54d6e%2Ff4318684a3594d7dbf907ae00a93b1b3?format=webp&width=800",
+    before: "https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F7e6a32c999a04b28927c0d65d8f15e58?format=webp&width=800&height=1200",
+    after: "https://cdn.builder.io/api/v1/image/assets%2Fa85192c0436d4571a8e6190f11f433bd%2F362aa72b9d3e4362bea32e72534d81ae?format=webp&width=800&height=1200",
   },
   {
     category: "Facial contouring",
@@ -65,11 +65,12 @@ function Comparison({ before, after, labelL, labelR, sessions }: { before: strin
         src={before}
         alt={`${labelL} image`}
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ transform: "scale(1.1)" }}
         loading="lazy"
         decoding="async"
       />
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-        <img src={after} alt={`${labelR} image`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+        <img src={after} alt={`${labelR} image`} className="w-full h-full object-cover" style={{ transform: "scale(1.1)" }} loading="lazy" decoding="async" />
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
@@ -98,7 +99,7 @@ function Comparison({ before, after, labelL, labelR, sessions }: { before: strin
 
 export default function BelvisoGallery() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-80 h-80 bg-primary/3 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/3 rounded-full blur-3xl animate-pulse" />

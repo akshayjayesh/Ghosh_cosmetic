@@ -37,6 +37,26 @@ export default function Contact() {
     if (formStep > 1) setFormStep(formStep - 1)
   }
 
+  const handleSubmit = () => {
+    // Validate required fields
+    if (!formData.name || !formData.phone || !formData.branch || !formData.service || !formData.date || !formData.time) {
+      alert("Please fill in all the required fields")
+      return
+    }
+
+    // Create WhatsApp message
+    const message = `Hello! I would like to book an appointment.\n\nDetails:\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\nBranch: ${formData.branch}\nPreferred Date: ${formData.date}\nPreferred Time: ${formData.time}`
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message)
+
+    // WhatsApp Business API URL
+    const whatsappUrl = `https://wa.me/919447045560?text=${encodedMessage}`
+
+    // Open WhatsApp
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
     <section id="contact" className="py-20 bg-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -137,12 +157,8 @@ export default function Contact() {
                         onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
                       >
                         <option value="">Choose a branch</option>
-                        <option value="Kochi">Kochi Main</option>
-                        <option value="TVM">Thiruvananthapuram</option>
-                        <option value="Kozhikode">Kozhikode</option>
-                        <option value="Ernakulathappan">Ernakulathappan</option>
-                        <option value="Thrissur">Thrissur</option>
-                        <option value="Kottayam">Kottayam</option>
+                        <option value="Thalassery">Thalassery</option>
+                        
                       </select>
                     </div>
                     <div>
@@ -228,7 +244,7 @@ export default function Contact() {
                   </Button>
                 )}
                 {formStep === 3 && (
-                  <Button className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-lg py-6 hover:shadow-lg hover:scale-105 transition-all font-semibold">
+                  <Button onClick={handleSubmit} className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-lg py-6 hover:shadow-lg hover:scale-105 transition-all font-semibold">
                     Book Now
                   </Button>
                 )}
@@ -257,15 +273,15 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="mailto:hello@drniyaz.com"
-                  className="flex items-center gap-4 p-4 bg-white rounded-lg hover:shadow-lg transition-all cursor-pointer group hover:scale-105"
+                  href="mailto:belvisofacialcosmetics@gmail.com"
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-lg transition-all cursor-pointer group hover:scale-105 min-w-0"
                 >
-                  <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all">
+                  <div className="w-12 h-12 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all flex-shrink-0">
                     <Mail className="text-primary" size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-xs text-muted-foreground">Email</p>
-                    <p className="font-bold text-primary">hello@dr.com</p>
+                    <p className="font-bold text-primary text-sm break-words line-clamp-2">belvisofacialcosmetics@gmail.com</p>
                   </div>
                 </a>
 
@@ -275,7 +291,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">Main Branch</p>
-                    <p className="font-bold text-foreground text-sm">MG Road, Kochi</p>
+                    <p className="font-bold text-foreground text-sm">Thalassery</p>
                   </div>
                 </div>
               </div>
@@ -286,7 +302,7 @@ export default function Contact() {
                 <div className="space-y-1 text-sm">
                   <p className="flex justify-between hover:translate-x-1 transition-transform cursor-pointer">
                     <span className="text-muted-foreground">Mon - Sat:</span>{" "}
-                    <span className="font-semibold">9:00 AM - 8:00 PM</span>
+                    <span className="font-semibold">9:00 AM - 7:00 PM</span>
                   </p>
                   <p className="flex justify-between hover:translate-x-1 transition-transform cursor-pointer">
                     <span className="text-muted-foreground">Sunday:</span>{" "}
@@ -300,13 +316,34 @@ export default function Contact() {
               </div>
             </Card>
 
-            {/* Special Offer */}
-            <Card className="p-6 bg-gradient-to-r from-primary to-accent text-white shadow-xl hover:shadow-2xl transition-all hover:scale-105 cursor-pointer animate-pulse">
-              <p className="text-sm font-semibold mb-2">LIMITED TIME OFFER</p>
-              <p className="text-2xl font-bold mb-2">30% OFF</p>
-              <p className="text-sm mb-4">On your first appointment and treatment planning</p>
-              <p className="text-xs opacity-90">Valid till end of month. T&C apply.</p>
-            </Card>
+          </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="mt-16">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-2xl font-bold text-foreground">Our Location</h3>
+            <a
+              href="https://maps.app.goo.gl/AgrZXaPA6diNoB7T8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all hover:scale-105"
+            >
+              <MapPin size={18} />
+              Open in Maps
+            </a>
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.8956482932546!2d75.5193!3d11.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65cccc5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sThalassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-xl"
+            />
           </div>
         </div>
       </div>
